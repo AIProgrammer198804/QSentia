@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/QSentia/static/css/main.2b265aa7.css",
-    "main.js": "/QSentia/static/js/main.6f5b9e42.js",
-    "static/js/453.32b3fa1e.chunk.js": "/QSentia/static/js/453.32b3fa1e.chunk.js",
+    "main.css": "/QSentia/static/css/main.e6c13ad2.css",
+    "main.js": "/QSentia/static/js/main.6fa2ee1a.js",
+    "static/js/453.d98f96e8.chunk.js": "/QSentia/static/js/453.d98f96e8.chunk.js",
     "static/media/logo.png": "/QSentia/static/media/logo.f221956ad867757159ed.png",
     "index.html": "/QSentia/index.html",
-    "main.2b265aa7.css.map": "/QSentia/static/css/main.2b265aa7.css.map",
-    "main.6f5b9e42.js.map": "/QSentia/static/js/main.6f5b9e42.js.map",
-    "453.32b3fa1e.chunk.js.map": "/QSentia/static/js/453.32b3fa1e.chunk.js.map"
+    "main.e6c13ad2.css.map": "/QSentia/static/css/main.e6c13ad2.css.map",
+    "main.6fa2ee1a.js.map": "/QSentia/static/js/main.6fa2ee1a.js.map",
+    "453.d98f96e8.chunk.js.map": "/QSentia/static/js/453.d98f96e8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2b265aa7.css",
-    "static/js/main.6f5b9e42.js"
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.6fa2ee1a.js"
   ]
 }
