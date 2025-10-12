@@ -85,7 +85,7 @@ const App = () => {
       margin: '0 auto 48px auto'
     },
     button: {
-      backgroundColor: '#000000',
+      backgroundColor: '#4338ca',
       color: '#ffffff',
       padding: '16px 48px',
       fontSize: '16px',
@@ -179,7 +179,8 @@ const App = () => {
       backgroundColor: '#f9fafb',
       borderRadius: '50%',
       marginRight: '12px',
-      transition: 'all 0.3s ease'
+      transition: 'all 0.3s ease',
+      border: '2px solid #4338ca'
     },
     aboutCardTitle: {
       fontSize: '1.25rem',
@@ -400,8 +401,8 @@ const App = () => {
             transform: 'translate(-50%, -50%)',
             width: '320px',
             height: '120px',
-            border: '1px solid #000000',
-            opacity: 0.1,
+            border: '1px solid #4338ca',
+            opacity: 0.2,
             borderRadius: '4px',
             animation: 'logoGlow 8s ease-in-out infinite',
             zIndex: 12
@@ -414,8 +415,8 @@ const App = () => {
             transform: 'translate(-50%, -50%)',
             width: '380px',
             height: '140px',
-            border: '1px solid #000000',
-            opacity: 0.05,
+            border: '1px solid #4338ca',
+            opacity: 0.1,
             borderRadius: '6px',
             animation: 'logoGlow 12s ease-in-out infinite reverse',
             zIndex: 11
@@ -433,7 +434,7 @@ const App = () => {
             textAlign: 'center'
           }}>
             <span style={{
-              border: '4px solid #000000',
+              border: '4px solid #4338ca',
               padding: '4px 12px',
               marginRight: '8px',
               display: 'inline-block'
@@ -551,7 +552,7 @@ const App = () => {
                 position: 'relative',
                 zIndex: 10
               }} className="performance-card">
-                <div style={{fontSize: '2.5rem', fontWeight: '300', color: '#000000', marginBottom: '8px'}}>
+                <div style={{fontSize: '2.5rem', fontWeight: '300', color: '#4338ca', marginBottom: '8px'}}>
                   {item.value}
                 </div>
                 <div style={{fontSize: '1rem', fontWeight: '500', color: '#1a1a1a', marginBottom: '4px'}}>
@@ -766,13 +767,13 @@ const App = () => {
           <div style={styles.ctaButtons}>
             <button 
               style={styles.ctaButtonPrimary}
-              onClick={() => window.location.href = 'mailto:recruiter@qsentia.com?subject=Investment Inquiry - QSENTIA&body=Hello Lucas,%0D%0A%0D%0AI am interested in learning more about QSENTIA\'s quantitative investment strategies.%0D%0A%0D%0APlease contact me to discuss potential investment opportunities.%0D%0A%0D%0AThank you.'}
+              onClick={() => window.location.href = 'mailto:recruiter@qsentia.com?subject=Investment Inquiry - QSENTIA&body=Hello,%0D%0A%0D%0AI am interested in learning more about QSENTIA\'s quantitative investment strategies.%0D%0A%0D%0APlease contact me to discuss potential investment opportunities.%0D%0A%0D%0AThank you.'}
             >
               Get Started
             </button>
             <button 
               style={styles.ctaButtonSecondary}
-              onClick={() => window.location.href = 'mailto:recruiter@qsentia.com?subject=Information Request - QSENTIA&body=Hello Lucas,%0D%0A%0D%0AI would like to learn more about QSENTIA and your investment approach.%0D%0A%0D%0APlease send me additional information.%0D%0A%0D%0AThank you.'}
+              onClick={() => window.location.href = 'mailto:recruiter@qsentia.com?subject=Information Request - QSENTIA&body=Hello,%0D%0A%0D%0AI would like to learn more about QSENTIA and your investment approach.%0D%0A%0D%0APlease send me additional information.%0D%0A%0D%0AThank you.'}
             >
               Learn More
             </button>
@@ -845,9 +846,9 @@ const App = () => {
         }
         
         button:hover {
-          background-color: #333333;
+          background-color: #3730a3;
           transform: translateY(-2px);
-          box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+          box-shadow: 0 8px 25px rgba(67, 56, 202, 0.3);
         }
         
         img:hover {
