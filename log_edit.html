@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Background</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+        }
+        
+        .background-container {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+        }
+        
+        /* Animations */
+        @keyframes boldPulse {
+            0%, 100% { opacity: 0.6; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.8); }
+        }
+        
+        @keyframes slideHorizontal {
+            0% { transform: translateX(-200px); opacity: 0; }
+            20% { opacity: 0.4; }
+            80% { opacity: 0.4; }
+            100% { transform: translateX(100vw); opacity: 0; }
+        }
+        
+        @keyframes floatRotate {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
+            50% { transform: translateY(-40px) rotate(180deg); opacity: 0.7; }
+        }
+        
+        @keyframes gridMove {
+            0% { transform: translateX(0px) translateY(0px); }
+            100% { transform: translateX(40px) translateY(40px); }
+        }
+        
+        @keyframes slideDiagonal {
+            0% { transform: translateX(-300px) translateY(-100px) rotate(45deg); opacity: 0; }
+            30% { opacity: 0.15; }
+            70% { opacity: 0.15; }
+            100% { transform: translateX(100vw) translateY(100vh) rotate(45deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-container">
+        <!-- Moving dots positioned away from center -->
+        <div id="dots-container"></div>
+        
+        <!-- Moving lines in top and bottom areas -->
+        <div id="lines-container"></div>
+        
+        <!-- Floating squares in corners and edges -->
+        <div id="squares-container"></div>
+        
+        <!-- Grid overlay -->
+        <div style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.08;
+            background-image: linear-gradient(#000 2px, transparent 2px), linear-gradient(90deg, #000 2px, transparent 2px);
+            background-size: 40px 40px;
+            animation: gridMove 12s linear infinite;
+        "></div>
+        
+        <!-- Diagonal stripes -->
+        <div id="stripes-container"></div>
+    </div>
+
+    <script>
+        // Create moving dots
+        const dotsContainer = document.getElementById('dots-container');
+        for (let i = 0; i < 15; i++) {
+            const isInLogoArea = (i >= 6 && i <= 9);
+            if (isInLogoArea) continue;
+            
+            const dot = document.createElement('div');
+            dot.style.cssText = `
+                position: absolute;
+                width: 6px;
+                height: 6px;
+                background-color: #000000;
+                border-radius: 50%;
+                opacity: 0.6;
+                left: ${5 + i * 6}%;
+                top: ${i < 6 ? 10 + (i % 2) * 15 : 70 + (i % 2) * 15}%;
+                animation: boldPulse ${1.5 + i * 0.2}s ease-in-out infinite;
+            `;
+            dotsContainer.appendChild(dot);
+        }
+        
+        // Create moving lines
+        const linesContainer = document.getElementById('lines-container');
+        for (let i = 0; i < 6; i++) {
+            const line = document.createElement('div');
+            line.style.cssText = `
+                position: absolute;
+                width: 200px;
+                height: 2px;
+                background-color: #000000;
+                opacity: 0.4;
+                left: ${i * 16}%;
+                top: ${i < 3 ? 5 + i * 10 : 75 + (i-3) * 10}%;
+                animation: slideHorizontal ${3 + i}s linear infinite;
+            `;
+            linesContainer.appendChild(line);
+        }
+        
+        // Create floating squares
+        const squaresContainer = document.getElementById('squares-container');
+        const positions = [
+            {left: '5%', top: '15%'}, {left: '85%', top: '10%'}, 
+            {left: '10%', top: '25%'}, {left: '90%', top: '20%'},
+            {left: '8%', top: '75%'}, {left: '88%', top: '80%'},
+            {left: '15%', top: '85%'}, {left: '80%', top: '85%'}
+        ];
+        
+        for (let i = 0; i < 8; i++) {
+            const square = document.createElement('div');
+            square.style.cssText = `
+                position: absolute;
+                width: 25px;
+                height: 25px;
+                border: 2px solid #000000;
+                opacity: 0.3;
+                left: ${positions[i].left};
+                top: ${positions[i].top};
+                animation: floatRotate ${4 + i}s ease-in-out infinite;
+                transform: rotate(${i * 45}deg);
+            `;
+            squaresContainer.appendChild(square);
+        }
+        
+        // Create diagonal stripes
+        const stripesContainer = document.getElementById('stripes-container');
+        for (let i = 0; i < 4; i++) {
+            const stripe = document.createElement('div');
+            stripe.style.cssText = `
+                position: absolute;
+                width: 300px;
+                height: 3px;
+                background-color: #000000;
+                opacity: 0.15;
+                left: ${i < 2 ? -30 + i * 30 : 50 + (i-2) * 30}%;
+                top: ${15 + i * 20}%;
+                transform: rotate(45deg);
+                animation: slideDiagonal ${6 + i * 2}s linear infinite;
+            `;
+            stripesContainer.appendChild(stripe);
+        }
+    </script>
+</body>
+</html>

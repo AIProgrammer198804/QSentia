@@ -789,7 +789,7 @@ const App = () => {
             <div style={styles.footerTagline}>Intelligent Portfolio Management</div>
           </div>
           <div style={styles.copyright}>
-            © 2024 QSENTIA. All rights reserved.
+            © 2025 QSENTIA. All rights reserved.
           </div>
         </div>
       </div>
