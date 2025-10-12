@@ -487,7 +487,7 @@ const App = () => {
         
         <button 
           style={styles.button}
-          onClick={() => window.location.href = 'mailto:Lucas.Zarzeczny@qsentia.com?subject=Investment Inquiry - QSENTIA&body=Hello Lucas,%0D%0A%0D%0AI am interested in learning more about QSENTIA\'s quantitative investment strategies.%0D%0A%0D%0APlease contact me to discuss potential investment opportunities.%0D%0A%0D%0AThank you.'}
+          onClick={() => window.location.href = 'mailto:recruiter@qsentia.com?subject=Investment Inquiry - QSENTIA&body=Hello Lucas,%0D%0A%0D%0AI am interested in learning more about QSENTIA\'s quantitative investment strategies.%0D%0A%0D%0APlease contact me to discuss potential investment opportunities.%0D%0A%0D%0AThank you.'}
         >
           Request Information
         </button>
@@ -537,7 +537,7 @@ const App = () => {
         
         <div style={{maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 10}}>
           <h2 style={{fontSize: '2rem', fontWeight: '300', textAlign: 'center', marginBottom: '48px', color: '#1a1a1a'}}>
-            Live Performance Metrics
+            Backtesting Performance Metrics
           </h2>
           <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '24px'}}>
             {performanceData.map((item, index) => (
@@ -766,13 +766,13 @@ const App = () => {
           <div style={styles.ctaButtons}>
             <button 
               style={styles.ctaButtonPrimary}
-              onClick={() => window.location.href = 'mailto:Lucas.Zarzeczny@qsentia.com?subject=Investment Inquiry - QSENTIA&body=Hello Lucas,%0D%0A%0D%0AI am interested in learning more about QSENTIA\'s quantitative investment strategies.%0D%0A%0D%0APlease contact me to discuss potential investment opportunities.%0D%0A%0D%0AThank you.'}
+              onClick={() => window.location.href = 'mailto:recruiter@qsentia.com?subject=Investment Inquiry - QSENTIA&body=Hello Lucas,%0D%0A%0D%0AI am interested in learning more about QSENTIA\'s quantitative investment strategies.%0D%0A%0D%0APlease contact me to discuss potential investment opportunities.%0D%0A%0D%0AThank you.'}
             >
               Get Started
             </button>
             <button 
               style={styles.ctaButtonSecondary}
-              onClick={() => window.location.href = 'mailto:Lucas.Zarzeczny@qsentia.com?subject=Information Request - QSENTIA&body=Hello Lucas,%0D%0A%0D%0AI would like to learn more about QSENTIA and your investment approach.%0D%0A%0D%0APlease send me additional information.%0D%0A%0D%0AThank you.'}
+              onClick={() => window.location.href = 'mailto:recruiter@qsentia.com?subject=Information Request - QSENTIA&body=Hello Lucas,%0D%0A%0D%0AI would like to learn more about QSENTIA and your investment approach.%0D%0A%0D%0APlease send me additional information.%0D%0A%0D%0AThank you.'}
             >
               Learn More
             </button>
