@@ -19,10 +19,10 @@ const App = () => {
   ];
 
   const performanceData = [
-    { metric: "Sharpe Ratio", value: "2.01", period: "Risk-Adjusted Return" },
-    { metric: "Calmar Ratio", value: "2.71", period: "Return vs Max DD" },
-    { metric: "Sortino Ratio", value: "3.77", period: "Downside Deviation" },
-    { metric: "Maximum Drawdown", value: "7.77%", period: "Peak to Trough" }
+    { metric: "Sharpe Ratio", value: "2.6", period: "Risk-Adjusted Return" },
+    { metric: "Calmar Ratio", value: "5.6", period: "Return vs Max DD" },
+    { metric: "Sortino Ratio", value: "5.5", period: "Downside Deviation" },
+    { metric: "Maximum Drawdown", value: "18%", period: "Peak to Trough" }
   ];
 
   const styles = {
